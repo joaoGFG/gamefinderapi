@@ -16,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PagedResourcesAssembler;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.PagedModel;
+import org.springframework.hateoas.RepresentationModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,9 +31,11 @@ public class GameController {
     private GameService gameService;
 
     @GetMapping
-    public PagedModel<EntityModel<Game>> getAll(Pageable pageable, PagedResourcesAssembler<Game> assembler) {
+    public PagedModel<RepresentationModel<?>> getAll(Pageable pageable, PagedResourcesAssembler<Game> assembler) {
         var page = gameService.getAllGames(pageable);
-        return assembler.toModel(page);
+
+
+        return assembler.toModel(page, game -> game.ToEntityModel());
     }
 
     @GetMapping("{id}")
