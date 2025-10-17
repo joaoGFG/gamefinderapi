@@ -1,6 +1,6 @@
 # 🎮 API de Busca de Jogos
 
-Este projeto consiste em uma **API RESTful** desenvolvida como parte de uma **avaliação prática em sala de aula**, baseada no front-end disponibilizado pelo professor:  
+Este projeto consiste em uma **API RESTful** desenvolvida como parte de um **exercício e prática em sala de aula**, baseada no front-end disponibilizado pelo professor:  
 🔗 [Repositório do front-end](https://github.com/joaocarloslima/gamefinder-web)
 
 ---
@@ -55,4 +55,4 @@ O principal objetivo deste projeto foi **aplicar o uso da biblioteca HATEOAS do 
 
 ---
 
-Desenvolvido para a disciplina de **Java Advanced**, como parte da avaliação em tempo de aula.
+Desenvolvido para a disciplina de **Java Advanced**, como parte do exercício em tempo de aula.
